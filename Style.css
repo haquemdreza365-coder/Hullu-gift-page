@@ -1,0 +1,208 @@
+/* Base Styles and Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h1, h2, h3 { font-weight: 700; line-height: 1.2; color: #000; }
+
+/* Top Disclosure Bar */
+.top-disclosure {
+    background-color: #f1c40f; /* Yellow for attention */
+    color: #333;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background: #ffffff;
+    padding: 20px 0 40px;
+    text-align: center;
+    border-bottom: 5px solid #3498db; /* Blue for trust/tech */
+}
+.logo-container { padding: 10px 0; text-align: left; }
+
+.trust-badge {
+    color: #27ae60; /* Green for success/trust */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.hero-section h1 {
+    font-size: 2.8em;
+    color: #e74c3c; /* Red for high impact */
+    margin-bottom: 10px;
+}
+.hero-section h2 {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Image and CTA Wrapper */
+.hero-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.urgency-cta-wrapper {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.limited-time-text {
+    font-size: 1.1em;
+    color: #c0392b;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.countdown-timer {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+/* Primary CTA Button */
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 800;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.primary-cta {
+    background-color: #ff9900; /* High-Energy Orange/Gold */
+    color: white;
+    animation: pulse 1.5s infinite; /* Animation for high conversion */
+}
+.primary-cta:hover { background-color: #e68a00; }
+.guarantee-text { font-size: 0.85em; color: #666; margin-top: 10px; }
+
+/* Button Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* B. Benefits Section */
+.benefits-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+.benefit-list li {
+    background: #ecf8f3;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-left: 4px solid #2ecc71;
+    font-size: 1.1em;
+    border-radius: 4px;
+}
+
+/* C. FAQ Section */
+.faq-section {
+    padding: 40px 0;
+    background-color: #f4f4f9;
+}
+details { margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+summary { padding: 15px; background: #eef; font-weight: 600; cursor: pointer; border-radius: 4px; }
+
+/* D. Footer */
+.footer-section {
+    background-color: #34495e;
+    color: #bbb;
+    padding: 20px 0;
+    text-align: center;
+}
+.disclaimer { font-size: 0.75em; margin-bottom: 15px; }
+.footer-links a { color: #bbb; text-decoration: none; margin: 0 10px; font-size: 0.9em; }
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .hero-section h1 { font-size: 2em; }
+    .hero-section h2 { font-size: 1.1em; }
+    .cta-button { font-size: 1.2em; padding: 12px; }
+}/* Custom CSS for SVG Logo Animation and Colors */
+
+/* Basic styling for the logo container */
+.logo-container {
+    padding: 15px 0; /* Adjust padding as needed */
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px;
+}
+
+/* Style for the SVG itself */
+.logo-container svg {
+    max-width: 250px; /* Ensures logo fits on smaller screens */
+    height: auto;
+    display: block; /* Make SVG block level to center it with text-align */
+    margin: 0 auto; /* Center the SVG within its container */
+}
+
+/* Targeting specific SVG elements for color and animation */
+.logo-container svg path:first-of-type { /* First path: the chopper/knife outline */
+    fill: #27ae60; /* Fresh Green */
+    transition: fill 0.5s ease; /* Smooth color transition */
+}
+
+.logo-container svg path:nth-of-type(2) { /* Second path: the slice/accent */
+    fill: #f39c12; /* Vibrant Orange */
+    transition: fill 0.5s ease;
+}
+
+.logo-container svg text:first-of-type { /* First text: "Win Today" */
+    fill: #2980b9; /* Clear Blue */
+    animation: textPulse 2s infinite alternate; /* Text animation */
+    transition: fill 0.5s ease;
+}
+
+.logo-container svg text:last-of-type { /* Second text: "Giveaways" */
+    fill: #7f8c8d; /* Subtle Gray */
+    transition: fill 0.5s ease;
+}
+
+/* Hover effect for the entire SVG */
+.logo-container svg:hover path:first-of-type {
+    fill: #2ecc71; /* Lighter green on hover */
+}
+.logo-container svg:hover path:nth-of-type(2) {
+    fill: #f1c40f; /* Lighter orange on hover */
+}
+.logo-container svg:hover text:first-of-type {
+    fill: #3498db; /* Lighter blue on hover */
+}
+
+/* Keyframe animation for text pulse */
+@keyframes textPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.02); opacity: 0.95; }
+}
